@@ -21,6 +21,7 @@ public class TestKafkaProducerController {
     @RequestMapping("/send")
     public String send(String message){
         kafkaTemplate.send("test_topic", message);
+        System.out.println("message-->" + message);
         return message;
     }
 
