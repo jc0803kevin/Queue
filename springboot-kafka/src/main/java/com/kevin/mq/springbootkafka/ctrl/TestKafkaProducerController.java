@@ -20,8 +20,10 @@ public class TestKafkaProducerController {
 
     @RequestMapping("/send")
     public String send(String message){
+        String temp = String.valueOf(System.currentTimeMillis());
+        message = message + temp;
         kafkaTemplate.send("test_topic", message);
-        System.out.println("message-->" + message);
+        System.out.println("producer send message-->" + message);
         return message;
     }
 
