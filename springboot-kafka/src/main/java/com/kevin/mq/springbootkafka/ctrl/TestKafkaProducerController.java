@@ -23,6 +23,7 @@ public class TestKafkaProducerController {
         String temp = String.valueOf(System.currentTimeMillis());
         message = message + temp;
         kafkaTemplate.send("test_topic", message);
+        kafkaTemplate.send("test_topic2", message);
         System.out.println("producer send message-->" + message);
         return message;
     }
