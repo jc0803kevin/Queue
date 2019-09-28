@@ -81,6 +81,7 @@ public class ActiveMQConfig {
     @Bean
     public JmsListenerContainerFactory<?> jmsListenerContainerQueue(ActiveMQConnectionFactory connectionFactory) {
         DefaultJmsListenerContainerFactory bean = new DefaultJmsListenerContainerFactory();
+        bean.setPubSubDomain(false);//默认为false queue模式
         bean.setConnectionFactory(connectionFactory);
         return bean;
     }
