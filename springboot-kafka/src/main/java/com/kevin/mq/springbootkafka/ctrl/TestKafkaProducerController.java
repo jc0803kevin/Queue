@@ -15,12 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/kafka")
 public class TestKafkaProducerController {
 
-    @Autowired
+    @Autowired(required = false )
     private KafkaTemplate<String, String> kafkaTemplate;
 
     @RequestMapping("/send")
     public String send(String message){
+        String temp = String.valueOf(System.currentTimeMillis());
+        message = message + temp;
         kafkaTemplate.send("test_topic", message);
+        kafkaTemplate.send("test_topic2", message);
+        System.out.println("producer send message-->" + message);
         return message;
     }
 

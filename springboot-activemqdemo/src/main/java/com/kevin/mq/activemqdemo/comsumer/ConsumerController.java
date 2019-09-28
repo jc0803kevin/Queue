@@ -17,7 +17,7 @@ public class ConsumerController {
     /**
      * 点对点模式
      * 生产者发送的消息，只能被一个消费者消费
-     *
+     * 可以通过containerFactory 实现queue topic同时生效
      *
      * */
 
