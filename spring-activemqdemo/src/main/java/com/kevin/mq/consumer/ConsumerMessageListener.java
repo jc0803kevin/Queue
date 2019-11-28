@@ -7,7 +7,7 @@ import javax.jms.TextMessage;
 
 /**
  * @Author kevin
- * @Description
+ * @Description 消息监听
  * @Date Created on 2019/8/11 14:43
  */
 public class ConsumerMessageListener implements MessageListener {
