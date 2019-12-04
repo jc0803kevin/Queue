@@ -20,10 +20,10 @@ public class ArrayQueueDemo {
         //输出一个菜单
         while (loop) {
             System.out.println("s(show)：显示队列");
-            System.out.println("e(show)：退出程序");
-            System.out.println("a(show)：添加数据到队列");
-            System.out.println("g(show)：从队列取出数据");
-            System.out.println("h(show)：查看队列头的数据");
+            System.out.println("e(exit)：退出程序");
+            System.out.println("p(push)：添加数据到队列");
+            System.out.println("g(get)：从队列取出数据");
+            System.out.println("h(head)：查看队列头的数据");
             key = scanner.next().charAt(0);  //接受一个字符
             switch (key) {
                 case 's':
@@ -32,7 +32,7 @@ public class ArrayQueueDemo {
                 case 'e':
                     queue.showQueue();
                     break;
-                case 'a':
+                case 'p':
                     System.out.println("输入一个数据");
                     int value = scanner.nextInt();
                     queue.addQueue(value);
@@ -40,7 +40,7 @@ public class ArrayQueueDemo {
                 case 'g'://取出数据
                     try {
                         int res = queue.getQueue();
-                        System.out.printf("取出的数据是%d\n",res);
+                        System.out.printf("取出的数据是%d\n", res);
                     } catch (Exception e) {
 
                     }
@@ -54,6 +54,7 @@ public class ArrayQueueDemo {
         }
     }
 }
+
 //使用数组模拟队列，编写一个ArrayQueue类
 class ArrayQueue {
     private int maxSize; // 队列的最大容量
