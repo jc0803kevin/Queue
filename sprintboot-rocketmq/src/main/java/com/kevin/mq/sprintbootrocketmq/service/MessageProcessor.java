@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 
 /**
  * @Author kevin
- * @Description
+ * @Description 发送消息
  * @Date Created on 2019/9/10 17:58
  */
 public interface MessageProcessor<T> {
