@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * @Author kevin
- * @Description
+ * @Description 多Tag
  * @Date Created on 2019/9/10 16:22
  */
 public class BroadcastConsumer {
