@@ -12,6 +12,14 @@ import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.apache.rocketmq.common.message.MessageExt;
 import java.util.List;
 
+/**
+ * @Author kevin
+ * @Description
+ * @Date Created on 2019/12/7 15:55
+ * @param 
+ * @return 
+ */
+
 public class ScheduledMessageConsumer {
 
     public static void main(String[] args) throws Exception {
