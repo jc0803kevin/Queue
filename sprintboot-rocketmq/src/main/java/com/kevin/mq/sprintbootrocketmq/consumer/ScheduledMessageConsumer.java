@@ -25,6 +25,7 @@ public class ScheduledMessageConsumer {
     public static void main(String[] args) throws Exception {
         // Instantiate message consumer
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("ExampleConsumer");
+
         // Subscribe topics
         consumer.subscribe("TopicTest", "*");
         // Register message listener
