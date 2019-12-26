@@ -45,8 +45,6 @@ public class KafkaConfig {
      * @Author kevin
      * @Description 不在配置文件中配置，直接在代码中配置
      * @Date Created on 2019/9/26 9:06
-     * @param
-     * @return
      */
     @Bean
     public Map<String, Object> consumerConfigs() {
