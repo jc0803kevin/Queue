@@ -49,7 +49,7 @@ public class KafkaConfig {
     @Bean
     public Map<String, Object> consumerConfigs() {
         Map<String, Object> props = new HashMap<>();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");//ip:port
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "test");
 
         //指定消息key和消息体的编解码方式 生产者编码 消费者解码
