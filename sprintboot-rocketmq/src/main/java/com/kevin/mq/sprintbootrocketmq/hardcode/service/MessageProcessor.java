@@ -1,4 +1,4 @@
-package com.kevin.mq.sprintbootrocketmq.service;
+package com.kevin.mq.sprintbootrocketmq.hardcode.service;
 
 import com.alibaba.fastjson.JSON;
 

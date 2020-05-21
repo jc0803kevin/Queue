@@ -1,4 +1,4 @@
-package com.kevin.mq.sprintbootrocketmq.producer;
+package com.kevin.mq.sprintbootrocketmq.hardcode.producer;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;

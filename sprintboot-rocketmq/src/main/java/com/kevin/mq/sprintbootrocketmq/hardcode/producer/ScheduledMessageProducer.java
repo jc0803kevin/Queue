@@ -1,4 +1,4 @@
-package com.kevin.mq.sprintbootrocketmq.producer;
+package com.kevin.mq.sprintbootrocketmq.hardcode.producer;
 
 /**
  * @Author kevin
