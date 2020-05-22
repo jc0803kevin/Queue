@@ -17,8 +17,8 @@ import org.springframework.context.annotation.Configuration;
 @Slf4j
 public class ProducerConfigure {
 
-    @Bean
-    @ConditionalOnProperty(prefix = "rocketmq.producer", value = "default", havingValue = "true")
+    //@Bean
+    //@ConditionalOnProperty(prefix = "rocketmq.producer", value = "default", havingValue = "true")
     public DefaultMQProducer defaultProducer() throws MQClientException {
         log.info("defaultProducer 正在创建---------------------------------------");
         DefaultMQProducer producer = new DefaultMQProducer("kevin-group");
