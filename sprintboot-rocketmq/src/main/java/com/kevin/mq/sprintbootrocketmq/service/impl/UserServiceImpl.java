@@ -3,6 +3,7 @@ package com.kevin.mq.sprintbootrocketmq.service.impl;
 import com.kevin.mq.sprintbootrocketmq.model.User;
 import com.kevin.mq.sprintbootrocketmq.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 /**
  * @Author kevin
@@ -10,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
  * @Date Created on 2020/5/21 17:56
  */
 @Slf4j
+@Service
 public class UserServiceImpl implements UserService {
 
     @Override
