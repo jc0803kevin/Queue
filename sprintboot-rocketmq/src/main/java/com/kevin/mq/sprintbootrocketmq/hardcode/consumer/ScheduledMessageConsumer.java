@@ -1,4 +1,4 @@
-package com.kevin.mq.sprintbootrocketmq.consumer;
+package com.kevin.mq.sprintbootrocketmq.hardcode.consumer;
 
 /**
  * @Author kevin

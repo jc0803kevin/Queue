@@ -2,6 +2,7 @@ package com.kevin.mq.sprintbootrocketmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /**
  * @Author kevin
@@ -10,10 +11,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-public class SprintbootRocketmqApplication {
+@ServletComponentScan(basePackages = {"com.kevin.mq"})
+public class SprintBootRocketMQApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SprintbootRocketmqApplication.class, args);
+        SpringApplication.run(SprintBootRocketMQApplication.class, args);
     }
 
 }
