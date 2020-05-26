@@ -24,5 +24,20 @@ public class CommonProducerTest  extends  SprintBootRocketMQApplicationTests{
 
     }
 
+    @Test
+    public void sendWithTag(){
+        commonProducer.convertAndSend();
+    }
+
+    @Test
+    public void batchMessages(){
+        commonProducer.batchMessages();
+    }
+
+    @Test
+    public void sendReply(){
+        commonProducer.sendReply();
+    }
+
 
 }

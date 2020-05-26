@@ -17,7 +17,7 @@ import org.springframework.messaging.Message;
  * @Date Created on 2020/5/21 18:32
  */
 @Slf4j
-@RocketMQTransactionListener(txProducerGroup = JmsConfig.PRODUCER)
+@RocketMQTransactionListener
 public class UserTopicListener implements RocketMQLocalTransactionListener {
 
     @Autowired

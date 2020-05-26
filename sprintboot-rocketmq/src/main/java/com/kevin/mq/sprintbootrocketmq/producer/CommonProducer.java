@@ -5,9 +5,13 @@ import org.apache.rocketmq.client.producer.SendCallback;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
+import org.apache.rocketmq.spring.support.RocketMQHeaders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Author kevin
@@ -68,5 +72,35 @@ public class CommonProducer {
 
     }
 
+
+    public void convertAndSend(){
+        rocketMQTemplate.convertAndSend(stringTopic + ":tagA", "I'm from tagA");  // tag0 will not be consumer-selected
+        System.out.printf("syncSend topic %s tag %s %n", stringTopic, "tagA");
+        rocketMQTemplate.convertAndSend(stringTopic + ":tag1", "I'm from tag1");
+        System.out.printf("syncSend topic %s tag %s %n", stringTopic, "tag1");
+    }
+
+    public void batchMessages(){
+        List<org.springframework.messaging.Message> msgs = new ArrayList<org.springframework.messaging.Message>();
+        for (int i = 0; i < 100; i++) {
+            msgs.add(MessageBuilder.withPayload("Hello RocketMQ Batch Msg#" + i).
+                    setHeader(RocketMQHeaders.KEYS, "KEY_" + i).build());
+        }
+
+        SendResult sr = rocketMQTemplate.syncSend(stringTopic, msgs, 60000);
+    }
+
+
+    /**
+     * @Author kevin
+     * @Description 以同步模式发送，并且接口回复信息
+     * @Date Created on 2020/5/26 15:43
+     */
+    public void sendReply(){
+        String replyString = rocketMQTemplate.sendAndReceive("stringRequestTopic:tagA", "request string kevin:", String.class);
+        System.out.printf("send %s and receive %s %n", "request string", replyString);
+
+
+    }
 
 }

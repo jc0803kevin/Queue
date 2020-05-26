@@ -42,7 +42,7 @@ public class UserController {
         Message message =messageBuilder.build();
 
 
-        TransactionSendResult result = rocketMQTemplate.sendMessageInTransaction(JmsConfig.PRODUCER, JmsConfig.TOPIC, message, null);
+        TransactionSendResult result = rocketMQTemplate.sendMessageInTransaction(JmsConfig.TOPIC, message, null);
 
 
         return result.getMsgId();
