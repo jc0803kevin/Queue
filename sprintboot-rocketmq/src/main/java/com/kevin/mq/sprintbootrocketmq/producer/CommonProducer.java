@@ -97,8 +97,8 @@ public class CommonProducer {
      * @Date Created on 2020/5/26 15:43
      */
     public void sendReply(){
-        String replyString = rocketMQTemplate.sendAndReceive("stringRequestTopic:tagA", "request string kevin:", String.class);
-        System.out.printf("send %s and receive %s %n", "request string", replyString);
+        //String replyString = rocketMQTemplate.sendAndReceive("stringRequestTopic:tagA", "request string kevin:", String.class);
+        //System.out.printf("send %s and receive %s %n", "request string", replyString);
 
 
     }
