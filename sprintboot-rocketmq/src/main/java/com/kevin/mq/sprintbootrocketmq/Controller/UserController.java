@@ -9,14 +9,13 @@ import org.apache.rocketmq.spring.support.RocketMQHeaders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @Author kevin
- * @Description
+ * @Description 发送事务消息
  * @Date Created on 2020/5/21 18:00
  */
 
@@ -31,6 +30,7 @@ public class UserController {
 
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
+
 
     @RequestMapping("/add")
     public String add(@RequestParam("name") String name, @RequestParam("age") Integer age){
@@ -47,5 +47,6 @@ public class UserController {
 
         return result.getMsgId();
     }
+
 
 }

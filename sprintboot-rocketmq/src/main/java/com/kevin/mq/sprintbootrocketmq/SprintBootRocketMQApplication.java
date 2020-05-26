@@ -12,10 +12,10 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
 @ServletComponentScan(basePackages = {"com.kevin.mq"})
-public class SprintbootRocketmqApplication {
+public class SprintBootRocketMQApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SprintbootRocketmqApplication.class, args);
+        SpringApplication.run(SprintBootRocketMQApplication.class, args);
     }
 
 }
