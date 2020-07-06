@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <rocketmq.version>4.4.0</rocketmq.version>
     </properties>
 
     <dependencies>
@@ -44,9 +45,15 @@
         <dependency>
             <groupId>org.apache.rocketmq</groupId>
             <artifactId>rocketmq-client</artifactId>
-            <version>4.4.0</version>
+            <version>${rocketmq.version}</version>
             <!-- <version>4.1.0-incubating</version>-->
         </dependency>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-tools</artifactId>
+            <version>${rocketmq.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.rocketmq</groupId>
             <artifactId>rocketmq-spring-boot-starter</artifactId>
