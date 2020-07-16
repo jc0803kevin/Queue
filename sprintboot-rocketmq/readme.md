@@ -86,3 +86,8 @@ usage: mqadmin updateTopic [-b <arg>] [-c <arg>] [-h] [-n <arg>] [-o <arg>] [-p 
 ```
 
 mqadmin updateTopic -n 127.0.0.1:9876 -t topic_family -c DefaultCluster -r 6 -w 6
+
+### 查看Topic列表信息
+```shell script
+start mqadmin.cmd topicList -n 127.0.0.1:9876
+```
